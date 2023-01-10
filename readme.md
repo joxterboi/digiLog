@@ -1,1 +1,1 @@
-# **DigiLog**
+# DigiLog
