@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>digiLogg</title>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;700;900&display=swap" rel="stylesheet">
+    
+    
+    <link rel="stylesheet" href="style/style.css">
+
+</head>
+<body>
+    <div id="addFlight">
+        <div class="button" id="openAddFlightPage">Add flight</div>
+    </div>
+
+
+    <div id="logContainer">
+        <div>
+            <p>Date</p>
+            <div>
+                <p>dd/mm/yyyy</p>
+            </div>
+        </div>
+        <div>
+            <p>Departure</p>
+            <div>
+                <p>Place</p>
+                <p>Time</p>
+            </div>
+        </div>
+        <div>
+            <p>Arrival</p>
+            <div>
+                <p>Place</p>
+                <p>Time</p>
+            </div>
+        </div>
+        <div>
+            <p>Aircraft</p>
+            <div>
+                <p>Make</p>
+                <p>Reg</p>
+            </div>
+        </div>
+        <div>
+            <p>Total time of flight</p>
+        </div>
+        <div>
+            <p>Operating condition time</p>
+            <div>
+                <p>IFR</p>
+                <p>Night</p>
+            </div>
+        </div>
+        <div>
+            <p>Pilot function time</p>
+        </div>
+        <div>
+            <p>Other type of flight time</p>
+            <div>
+                <p></p>
+                <p></p>
+                <p></p>
+            </div>
+        </div>
+        <div>
+            <p>FSTD</p>
+        </div>
+        <div>
+            <p>Landings</p>
+        </div>
+        <div>
+            <p>Remarks or endorsements</p>
+        </div>
+    </div>
+
+
+
+
+    <div id="addFlightPage" class="page ">
+        <h1>Add flight</h1>
+        <div id="formContainer">
+            <div>
+                <h2>Date</h2>
+                <input id="date" type="date" required>
+            </div>
+            
+            <div>
+                <h2>Departure</h2>
+                <label for="depPlace">Place</label>
+                <input id="depPlace" type="text" required>
+
+                <input id="depTime" type="time" required>
+                <label for="depTime">Time</label>
+            </div>
+
+            <div>
+                <h2>Arrival</h2>
+                <label for="arrPlace">Place</label>
+                <input id="arrPlace" type="text" required>
+
+                <input id="arrTime" type="time">
+                <label for="arrTime">Time</label required>
+            </div>
+            <div>
+                <h2>Aircraft</h2>
+                <label for="aircraftType">Type</label>
+                <input id="aircraftType" type="text" required>
+    
+                <input id="registration" type="text" required>
+                <label for="registration">Registration</label>
+            </div>
+            <div>
+                <h2>Type of operation</h2>
+                <label for="pic">PIC</label>
+                <input id="pic" name="timeType" type="radio" checked="checked">
+
+                <label for="coPilot">Co-pilot</label>
+                <input id="coPilot" name="timeType" type="radio">
+
+                <label for="dual">Dual</label>
+                <input id="dual" name="timeType" type="radio">
+            </div>
+            <div>
+                <h2>FSTD</h2>
+                <input type="checkbox" id="fstd">
+            </div>
+            <div>
+                <h2>Landing</h2>
+                <label for="day">Day</label>
+                <input id="day" name="landingType" type="radio" checked="checked">
+
+                <label for="night">Night</label>
+                <input id="night" name="landingType" type="radio">
+
+                <label for="water">Water</label>
+                <input id="water" name="landingType" type="radio">
+
+                <br><br>
+
+                <label for="numberOfLdgs">Number of landings</label>
+                <input type="number" id="numberOfLdgs" value="1">
+            </div>
+            <div>
+                <h2>Remarks</h2>
+                <textarea id="remarks" type="text-area"></textarea>
+            </div>
+            <div class="button" id="addFlightButton">ADD</div>
+        </div>
+    </div>
+    <script src="script/fireBase.js" type="module"></script>
+    <script src="script/script.js" type="module"></script>
+</body>
+</html>
