@@ -29,6 +29,9 @@
     margin-right: 20px;
     accent-color: var(--accent);
 }
+#formContainer input[type=checkbox] {
+    accent-color: var(--accent);
+}
 
 #formContainer label {
     font-weight: 700;

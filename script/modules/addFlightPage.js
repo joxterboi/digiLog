@@ -6,9 +6,9 @@ export function save() {
     let flightDetails = {}
 
     flightDetails.date = document.getElementById("date").value
-    flightDetails.depPlace = document.getElementById("depPlace").value
+    flightDetails.depPlace = document.getElementById("depPlace").value.toUpperCase()
     flightDetails.depTime = document.getElementById("depTime").value
-    flightDetails.arrPlace = document.getElementById("arrPlace").value
+    flightDetails.arrPlace = document.getElementById("arrPlace").value.toUpperCase()
     flightDetails.arrTime = document.getElementById("arrTime").value
 
     flightDetails.aircraftType = document.getElementById("aircraftType").value
@@ -18,8 +18,15 @@ export function save() {
 
     flightDetails.timeType = checkedRadio("timeType")
 
-    document.getElementById("fstd").checked ? flightDetails.fstdTime = flightDetails.totalTime : flightDetails.fstdTime = 0;
+    flightDetails.landingAmount = document.getElementById("numberOfLdgs").value
     
+    if(document.getElementById("fstd").checked) {
+        flightDetails.fstdTime = flightDetails.totalTime;
+        flightDetails.totalTime = "00:00";
+    } else {
+        flightDetails.fstdTime = "00:00";
+    }
+
     flightDetails.landingType = checkedRadio("landingType")
 
     flightDetails.remarks = document.getElementById("remarks").value
@@ -47,6 +54,9 @@ export function open() {
     document.getElementById("remarks").value = "Test first remark"
 }
 
+export function close() {
+    document.getElementById("addFlightPage").classList.add("hidden")
+}
 
 
 

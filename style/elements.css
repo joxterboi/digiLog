@@ -1,3 +1,4 @@
+/*  ELEMENTS */
 .button {
     background-color: var(--light);
     border: none;
@@ -12,4 +13,40 @@
 }
 .button:hover {
     cursor: pointer;
+}
+
+.card {
+    background-color: var(--light);
+    border-radius: 15px;
+    box-shadow: 2px 0 8px var(--dark);
+    padding: 20px;
+    text-align: center;
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.closePageButton {
+    margin: 20px;
+    font-size: 25px;
+    font-weight: 900;
+    width: 20px;
+    text-align: center;
+    padding: 5px;
+    margin-bottom: -50px;
+}
+.closePageButton:hover {
+    cursor: pointer;
+}
+
+/* TEXT STYLES */
+.pageTitle {
+    font-size: 2em;
+    font-weight: 700;
+    text-align: center;
+    margin: 30px 0;
+}
+
+.accent {
+    color: var(--accent);
+    font-weight: bold;
 }

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+    <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,75 +16,103 @@
 
 </head>
 <body>
+    <div id="logContainer">
+        <div id="logHeader"">
+            <div>
+                <p>Date</p>
+                <div>
+                    <p>dd/mm/yyyy</p>
+                </div>
+            </div>
+            <div>
+                <p>Departure</p>
+                <div>
+                    <p>Place</p>
+                    <p>Time</p>
+                </div>
+            </div>
+            <div>
+                <p>Arrival</p>
+                <div>
+                    <p>Place</p>
+                    <p>Time</p>
+                </div>
+            </div>
+            <div>
+                <p>Aircraft</p>
+                <div>
+                    <p>Make</p>
+                    <p>Reg</p>
+                </div>
+            </div>
+            <div>
+                <p>Total time of flight</p>
+            </div>
+            <div>
+                <p>Operating condition time</p>
+                <div>
+                    <p>IFR</p>
+                    <p>Night</p>
+                </div>
+            </div>
+            <div>
+                <p>Pilot function time</p>
+            </div>
+            <div>
+                <p>Other type of flight time</p>
+                <div>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                </div>
+            </div>
+            <div>
+                <p>FSTD</p>
+            </div>
+            <div>
+                <p>Landings</p>
+            </div>
+            <div>
+                <p>Remarks or endorsements</p>
+            </div>
+        </div>
+        <div id="logBody"></div>
+        <div id="logFooter">
+            <div>
+                <p>Total</p>
+            </div>
+            <div>
+                
+            </div>
+            <div>
+            </div>
+            <div>
+            </div>
+            <div id="totalTotalTime">
+            </div>
+            <div>
+            </div>
+            <div>
+            </div>
+            <div>
+            </div>
+            <div id="totalFstd">
+            </div>
+            <div id="totalLandings">
+            </div>
+            <div>
+            </div>
+        </div>
+        </div>
+    </div>
+
     <div id="addFlight">
         <div class="button" id="openAddFlightPage">Add flight</div>
     </div>
 
-
-    <div id="logContainer">
-        <div>
-            <p>Date</p>
-            <div>
-                <p>dd/mm/yyyy</p>
-            </div>
-        </div>
-        <div>
-            <p>Departure</p>
-            <div>
-                <p>Place</p>
-                <p>Time</p>
-            </div>
-        </div>
-        <div>
-            <p>Arrival</p>
-            <div>
-                <p>Place</p>
-                <p>Time</p>
-            </div>
-        </div>
-        <div>
-            <p>Aircraft</p>
-            <div>
-                <p>Make</p>
-                <p>Reg</p>
-            </div>
-        </div>
-        <div>
-            <p>Total time of flight</p>
-        </div>
-        <div>
-            <p>Operating condition time</p>
-            <div>
-                <p>IFR</p>
-                <p>Night</p>
-            </div>
-        </div>
-        <div>
-            <p>Pilot function time</p>
-        </div>
-        <div>
-            <p>Other type of flight time</p>
-            <div>
-                <p></p>
-                <p></p>
-                <p></p>
-            </div>
-        </div>
-        <div>
-            <p>FSTD</p>
-        </div>
-        <div>
-            <p>Landings</p>
-        </div>
-        <div>
-            <p>Remarks or endorsements</p>
-        </div>
-    </div>
-
-
-
-
-    <div id="addFlightPage" class="page ">
+<!-- PAGES -->
+    <div id="addFlightPage" class="page hidden">
+        <div id="closeAddFlightPage" class="closePageButton">X</div>
         <h1>Add flight</h1>
         <div id="formContainer">
             <div>
@@ -154,6 +182,9 @@
             </div>
             <div class="button" id="addFlightButton">ADD</div>
         </div>
+    </div>
+
+    <div id="flightDetailsPage" class="page hidden">
     </div>
     <script src="script/fireBase.js" type="module"></script>
     <script src="script/script.js" type="module"></script>
