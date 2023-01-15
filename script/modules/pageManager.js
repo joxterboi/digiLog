@@ -11,10 +11,18 @@ export function open(page) {
     document.getElementById(page).classList.remove("hidden")
 }
 
-export function hydrate(pageFile, pageDiv) {
+export function hydrate(pageFile, pageDiv, pageVar) {
+    // pageVar is used inside 'pageHtml' varible. It's optional
+    let closeButtons
     fetch(`../pages/${pageFile}.html`)
     .then(response => response.text())
     .then(pageHtml => {
-        document.getElementById(pageDiv).innerHTML = pageHtml
+        pageHtml = "`" + pageHtml + "`"
+        document.getElementById(pageDiv).innerHTML = eval(pageHtml);
+        
+        closeButtons = document.getElementsByClassName('closePageButton');
+        Array.from(closeButtons).forEach(closeButton => {
+            closeButton.addEventListener('click', closeAll)
+        })
     })
 }

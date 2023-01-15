@@ -1,38 +1,39 @@
-<div onclick="document.getElementById('flightDetailsPage').classList.add('hidden')" class="closePageButton">X</div>
+<div class="closePageButton">X</div>
+<!--  <div onclick="document.getElementById('flightDetailsPage').classList.add('hidden')" class="closePageButton">X</div> -->
 <h2 class="pageTitle">Flight details</h2>
-<h3 id="flightDetailsTitle">ESSA/Arlanda - ESMS/Malmö</h3>
+<h3>${pageVar.pageTitle}</h3>
 
 <div id="flightDetailsCardContainer">
     <div class="row">
         <div class="card">
             <h4>Total Flight Time</h4>
-            <p id="flightDetailsTotalTime" class="accent">00:54</p>
+            <p class="accent">${pageVar.totTime}</p>
         </div>
 
         <div class="card">
             <h4>Flight date</h4>
-            <p id="flightDetailsDate" class="accent"></p>
+            <p class="accent">${pageVar.date}</p>
         </div>
 
         <div class="card">
             <h4>Departure time</h4>
-            <p id="flightDetailsDepTime" class="accent"></p>
+            <p class="accent">${pageVar.depTime}</p>
         </div>
         <div class="card">
             <h4>Arrival time</h4>
-            <p id="flightDetailsArrTime" class="accent"></p>
+            <p class="accent">${pageVar.arrTime}</p>
         </div>
 
         <div class="card">
             <h4>Aircraft</h4>
-            <p id="flightDetailsAircraftType" class="accent">SR20</p>
-            <p id="flightDetailsAircraftReg" class="accent">SE-LUG</p>
+            <p class="accent">${pageVar.acftType}</p>
+            <p class="accent">${pageVar.acftReg}</p>
         </div>
     </div>
     <div class="row">
         <div class="card">
             <h4>Remark</h4>
-            <p id="flightDetailsRemark">This is the remark text</p>
+            <p>${pageVar.remark}</p>
         </div>
     </div>
 </div>
