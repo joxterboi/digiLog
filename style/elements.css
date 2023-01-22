@@ -32,11 +32,19 @@
     width: 20px;
     text-align: center;
     padding: 5px;
-    margin-bottom: -50px;
+    margin-bottom: 0px;
 }
 .closePageButton:hover {
     cursor: pointer;
 }
+
+.openPage {
+    max-width: 150px;
+}
+.openPage:hover {
+    cursor: pointer;
+}
+
 
 /* TEXT STYLES */
 .pageTitle {

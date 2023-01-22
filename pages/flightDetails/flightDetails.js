@@ -1,7 +1,7 @@
-import * as page from "./pageManager.js"
-import * as database from "../fireBase.js"
+import * as database from "../../script/fireBase.js"
+import * as page from "../../script/modules/pageManager.js"
 
-export async function seeDetails() {
+export async function open() {
     const flightDetails = await database.getFlight(this.id)
     const pageTitle = `${flightDetails.depAirport.airport_ident}/${flightDetails.depAirport.airport_name} - ${flightDetails.arrAirport.airport_ident}/${flightDetails.arrAirport.airport_name}`
     
@@ -16,6 +16,5 @@ export async function seeDetails() {
         acftReg: flightDetails.flightData.acftReg,
     }
 
-    page.hydrate("flightDetails", "flightDetailsPage", pageVars)
-    page.open("flightDetailsPage")
+    page.open("flightDetails", pageVars)
 }

@@ -1,6 +1,9 @@
-@import "addFlightPage.css";
 @import "elements.css";
-@import "flightDetails.css";
+
+@import "../pages/addFlight/addFlightPage.css";
+@import "../pages/flightDetails/flightDetails.css";
+@import "../pages/home/home.css";
+@import "../pages/logBook/logBook.css";
 
 :root {
     --pri: #1b2631;
@@ -22,10 +25,11 @@ body {
 }
 .page {
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     position: fixed;
     top: 0;
     left: 0;
+    margin:0;
     background-color: var(--pri);
 }
 
@@ -35,7 +39,6 @@ h1 {
     font-weight: 700;
     color: #fff;
     text-align: center;
-    margin-top: 35px;
     text-transform: uppercase;
 }
 
@@ -77,12 +80,4 @@ h1 {
 #logHeader > div > div, #logBody > div > div > div, #logFooter > div > div {
     display: flex;
     justify-content:space-around;
-}
-
-
-/* Add flight */
-#addFlight {
-    margin-left: 50%;
-    margin-top: 60px;
-    transform: translateX(-100px);
 }

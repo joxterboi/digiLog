@@ -2,7 +2,7 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
 import { getDatabase, set, get, remove, ref, child, limitToLast, query  } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js"
 
-import * as flightDetails from "./modules/flightDetails.js"
+import * as flightDetails from "../pages/flightDetails/flightDetails.js"
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -149,7 +149,7 @@ export function display() {
 
         const flightEntries = document.getElementsByClassName("flightEntry")
         Array.from(flightEntries).forEach(flightEntry => {
-            flightEntry.addEventListener('click', flightDetails.seeDetails)
+            flightEntry.addEventListener('click', flightDetails.open)
         })
 
     })
@@ -172,6 +172,11 @@ export async function getFlight(flightId) {
     }
     
     return fullFlightData
+}
+
+export async function getFlights() {
+    get(child(dbRef, "flights/"))
+    .then(data => data.val())
 }
 
 //Inputs total hr and minutes as inputed and converts minutes to hours

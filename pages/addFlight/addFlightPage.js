@@ -1,4 +1,5 @@
-import * as database from "../fireBase.js"
+import * as database from "../../script/fireBase.js"
+import * as page from "../../script/modules/pageManager.js"
 
 export function save() {
     document.getElementById("addFlightPage").classList.add("hidden")
@@ -35,30 +36,9 @@ export function save() {
     database.save(flightDetails)
 }
 
-export function open() {
-    document.getElementById("addFlightPage").classList.remove("hidden")
-
-    const currentDate = new Date().toJSON().slice(0,10);
-    document.getElementById("date").value = currentDate
-
-
-    //TESTING ONLY
-    document.getElementById("depPlace").value = "ESTL"
-    document.getElementById("depTime").value = "15:55"
-    document.getElementById("arrPlace").value = "ESSA"
-    document.getElementById("arrTime").value = "15:59"
-
-    document.getElementById("aircraftType").value = "SR20"
-    document.getElementById("registration").value = "SE-LUG"
-    
-    document.getElementById("remarks").value = "Test first remark"
+export async function open() {
+    page.open("addFlight")
 }
-
-export function close() {
-    document.getElementById("addFlightPage").classList.add("hidden")
-}
-
-
 
 // Local functions
 function addTime(startTime, endTime) {   
